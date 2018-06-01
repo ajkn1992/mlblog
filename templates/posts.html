@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="card-deck">
+        {% for post in posts %}
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.summary }}</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <small class="text-muted">{{ post.published_date | datetime("%d %B %Y") }}
+                            |
+                            <a href="{{ url_for("get_category", cat_name=post.category) }}">{{ post.category.title() }}</a>
+                        </small>
+                        <a href="{{ url_for('post', name=post.path.replace('posts/', ''), category=post.category) }}"
+                           class="btn btn-outline-dark float-right">Read More</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+

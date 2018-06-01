@@ -1,0 +1,59 @@
+title: Introduction to Hypothesis Testing
+summary: Multivariate Data Analysis using Python.
+published_date: 2018-05-29 10:24:03
+category: basics
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1><p>In our day to day routine we come across many questions such as:</p>
+<ul>
+<li>How much liters of water should be alotted on an average to a household in a region.</li>
+<li>How much stock of apple juice should I order for my guests.</li>
+<li>By what amount should we increase credit card limits for a certain group of customers.</li>
+<li>Should we provide additional tuition for language courses to science students.</li>
+</ul>
+<p>To figure out answers to these question at the very basic level, you don’t really need any hardcore statistics
+knowledge. For e.g., lets take first and last questions from the ones listed above.</p>
+<p>To figure out how much water on an average a household in a region would need, we can simply ask every house
+hold regarding the same. But its much harder than said. There are too many house holds to cover. Resources
+and time required to do this will definitely not justify the utility of outcome. So what do we do then? Instead
+of connecting with each and every household, we can talk to handful of them. Or in other words, take a
+small sample. And consider <em>their average consumption</em> as the general answer. But we need to be careful
+about what all households we are selecting as sample. Water consumption needs might not be same across
+all regions, also there will be certain differences between residential and commercial entities. Our
+sample should contain observations from all these different segments <em>[strata in population]</em> in order to truly
+represent the entire region.</p>
+<p>Taking up next question of whether science students need additional tuition for language courses. Underlying
+thought here is that science students perform poorly in language courses in comparison to students coming
+from other streams. To figure out if that is the case we’ll collect student performance data and see the average
+performance of students from both science and non-science streams. If science students are performing
+significantly worse than their counterparts, we’ll take the decision in favor of providing them with additional
+tuition.</p>
+<p>Common theme in strategy of solving both these problem was to collect data and then use it to verify, refute
+our claims or estimate the value of parameter. What our methods lacked though, was rigorous statistical
+framework. We’d build the same as we progress in this post.</p>
+<p>We’ll be discussing various concepts here onwards which might seem slightly disconnected in the beginning
+but everything will fall in place as we near the end. Starting with Population and Sample, we have already
+used these concepts above, its time to formally introduce them.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Population-&amp;-Samples">Population &amp; Samples<a class="anchor-link" href="#Population-&amp;-Samples">&#182;</a></h1><p>Population is a huge collection of data points. This can be anything from age of all graduating engineers in last decade or number of pages in individual books published on topic statistics in last century. If we want to figure out a parameter <em>[any characteristic]</em> value for this “population” we can measure in theory each and every observation to find the average value.</p>
+<p><img src="../../static/images/population_sample_1.png" alt="population sample image"></p>
+<p>As we witnessed earlier, this is rarely feasible. And for all practical purposes to estimate value of this
+population parameter <em>[such as average, standard deviation etc]</em> we work with a sample instead. These “sample” observations need to be randomly chosen in order to avoid personal bias. Also they should
+represent all strata present within the population.</p>
+<p><img src="../../static/images/stratified_sampling.png" alt="stratified_sampling"></p>
+
+</div>
+</div>
+</div>
+ 
+
